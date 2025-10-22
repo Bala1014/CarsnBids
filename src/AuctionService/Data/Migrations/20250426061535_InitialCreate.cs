@@ -24,7 +24,7 @@ namespace AuctionService.Data.Migrations
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     AuctionEnd = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    status = table.Column<int>(type: "integer", nullable: true)
+                    Status = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -38,10 +38,10 @@ namespace AuctionService.Data.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Make = table.Column<string>(type: "text", nullable: true),
                     Model = table.Column<string>(type: "text", nullable: true),
-                    year = table.Column<int>(type: "integer", nullable: false),
-                    color = table.Column<string>(type: "text", nullable: true),
+                    Year = table.Column<int>(type: "integer", nullable: false),
+                    Color = table.Column<string>(type: "text", nullable: true),
                     Mileage = table.Column<int>(type: "integer", nullable: false),
-                    ImgUrl = table.Column<string>(type: "text", nullable: true),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
                     AuctionId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
