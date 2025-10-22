@@ -46,14 +46,14 @@ namespace AuctionService.Data.Migrations
                     b.Property<int>("SoldAmount")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("Status")
+                        .HasColumnType("integer");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Winner")
                         .HasColumnType("text");
-
-                    b.Property<int?>("status")
-                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -69,7 +69,10 @@ namespace AuctionService.Data.Migrations
                     b.Property<Guid>("AuctionId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("ImgUrl")
+                    b.Property<string>("Color")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("text");
 
                     b.Property<string>("Make")
@@ -81,10 +84,7 @@ namespace AuctionService.Data.Migrations
                     b.Property<string>("Model")
                         .HasColumnType("text");
 
-                    b.Property<string>("color")
-                        .HasColumnType("text");
-
-                    b.Property<int>("year")
+                    b.Property<int>("Year")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
